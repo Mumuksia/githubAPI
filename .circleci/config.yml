@@ -34,7 +34,7 @@ jobs:
           name: Login to DockerHub
           command: docker login -u $USERNAME -p $PASSWORD
 
-      - run: gradle jib --image=githubapi.latest --stacktrace
+      - run: gradle jib --image=mumuksia/githubapi.latest --stacktrace
 
       # run tests!
       - run: gradle test
