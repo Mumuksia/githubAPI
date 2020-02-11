@@ -38,7 +38,7 @@ jobs:
 
       - run:
           name: Build Docker image
-          docker build -t githubapi/githubapi-docker:latest .
+          command: docker build -t githubapi/githubapi-docker:latest .
 
       # run tests!
       - run: gradle test
