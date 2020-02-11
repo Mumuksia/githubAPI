@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
 
-      - run: export TERM=xterm
+      - run: echo 'export TERM=xterm' >> $BASH_ENV
 
       - run: gradle build
 
