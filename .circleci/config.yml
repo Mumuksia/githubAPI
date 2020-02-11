@@ -37,7 +37,7 @@ jobs:
           docker_layer_caching: false
 
       - run:
-          TAG=0.1.$CIRCLE_BUILD_NUM
+          name: Build Docker image
           docker build -t githubapi/githubapi-docker:latest .
 
       # run tests!
