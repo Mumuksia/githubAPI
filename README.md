@@ -24,6 +24,9 @@ There are different ways to run application, the most simple are:
 
 The default port for this application is 80 but it can easily be changed in application.properties file.
 
+- also project can be started by pulling docker image and running it. Either port forwarding or simple:
+-- docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' dockerImagename -- should be sufficient.
+
 # todo
 
 - Add proper logging
