@@ -13,6 +13,17 @@ task stage {
 	dependsOn build
 }
 
+jib {
+	from {
+		image = 'openjdk:alpine'
+	}
+	to {
+		image = 'githubapi:latest'
+		credHelper = '*'
+	}
+}
+
+
 repositories {
 	mavenCentral()
 }
