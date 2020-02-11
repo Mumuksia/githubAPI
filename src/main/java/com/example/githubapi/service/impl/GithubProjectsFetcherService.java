@@ -4,7 +4,6 @@ import com.example.githubapi.service.ProjectsFetcherService;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
-import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -28,11 +27,6 @@ public class GithubProjectsFetcherService implements ProjectsFetcherService {
         }
 
         return Optional.empty();
-    }
-
-    @Override
-    public JSONObject getProjectInfoForUser(String userName, String projectId) {
-        return null;
     }
 
     @Override
