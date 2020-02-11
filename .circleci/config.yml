@@ -21,6 +21,7 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
+    machine: true
     steps:
       - checkout
 
@@ -32,9 +33,6 @@ jobs:
             - v1-dependencies-
 
       - run: gradle build
-
-      - setup_remote_docker:
-          docker_layer_caching: false
 
       - run:
           name: Build Docker image
