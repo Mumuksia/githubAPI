@@ -19,11 +19,19 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.fasterxml.jackson.core:jackson-core:2.10.2'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.2'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.2'
+	implementation 'commons-io:commons-io:2.5'
+
+
 
 	implementation 'org.json:json:20190722'
 	implementation 'com.sun.jersey:jersey-client:1.19.4'
 
 	testImplementation 'junit:junit:4.4'
+	testImplementation 'org.mockito:mockito-core:3.2.4'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
@@ -32,3 +40,4 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+

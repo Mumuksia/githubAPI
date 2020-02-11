@@ -10,4 +10,10 @@ public interface ProjectsFetcherService {
 
     JSONObject getProjectInfoForUser(String userName, String projectId);
 
+    Optional<String> getReadmeInfo(String userName, String repoName);
+
+    Optional<String> getContributors(String userName, String repoName);
+
+    Optional<String> getNumberOfCommits(String userName, String repoName);
+
 }

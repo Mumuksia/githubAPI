@@ -1,24 +1,33 @@
 package com.example.githubapi.model;
 
-public class Project {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
-    private long id;
+@XmlRootElement(name = "projectSummary")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class ProjectSummary {
+
+    private Long id;
 
     private String url;
 
     private String title;
 
-    public Project(long id, String url, String title) {
+    public ProjectSummary() {
+    }
+
+    public ProjectSummary(Long id, String url, String title) {
         this.id = id;
         this.url = url;
         this.title = title;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

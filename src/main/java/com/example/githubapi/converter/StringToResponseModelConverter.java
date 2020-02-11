@@ -1,10 +1,10 @@
 package com.example.githubapi.converter;
 
-import com.example.githubapi.model.Project;
+import com.example.githubapi.model.ProjectSummary;
 
-import java.util.Set;
+import java.util.List;
 
 public interface StringToResponseModelConverter {
 
-    Set<Project> convertResponseForProjects(String projects);
+    List<ProjectSummary> convertResponseForProjects(String projects);
 }
