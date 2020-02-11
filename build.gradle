@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1-snapshot'
 sourceCompatibility = '1.8'
 
 task stage {
@@ -15,18 +15,18 @@ task stage {
 }
 
 docker {
-	name = "githubAPI".plus(version)
-	uri("githubAPI".plus(version))
-	tag("name", "githubAPI")
-	buildArgs([BUILD_VERSION: '0.0.1-SNAPSHOT'])
+	name = "githubapi".plus(version)
+	uri("githubapi".plus(version))
+	tag("name", "githubapi")
+	buildArgs([BUILD_VERSION: '0.0.1-snapshot'])
 	copySpec.from("build").into("build")
 	pull(true)
 	setDockerfile(file('src/main/java/com/example/githubapi/docker/DockerFile'))
 }
 
 dockerRun {
-	name = "githubAPI".plus (version)
-	image = "githubAPI".plus(version)
+	name = "githubapi".plus (version)
+	image = "githubapi".plus(version)
 	ports("8080:8080")
 }
 
