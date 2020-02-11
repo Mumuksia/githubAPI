@@ -32,9 +32,9 @@ jobs:
 
       - run:
           name: Login to DockerHub
-          command: docker login -u 'mumuksia' -p 'S41n1gam1'
+          command: docker login -u $USERNAME -p $PASSWORD
 
-      - run: gradle jib --image=githubapi.latest
+      - run: gradle jib --image=githubapi.latest --stacktrace
 
       # run tests!
       - run: gradle test
