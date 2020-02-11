@@ -32,7 +32,7 @@ jobs:
 
       - run:
           name: Login to DockerHub
-          command: docker login -u 'mumuksia' --p 'S41n1gam1'
+          command: docker login -u 'mumuksia' -p 'S41n1gam1'
 
       - run: gradle jib --image=githubapi.latest
 
